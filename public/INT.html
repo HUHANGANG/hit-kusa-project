@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>하얼빈공업대학교 학생회</title>
+  <link rel="stylesheet" href="INTstyle.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+<style>
+  body {
+    background-color: #FAF8FF;
+  }
+
+  @media (max-width : 420px) {
+    .navbar {
+        width: 100%;
+      }
+
+    .main {
+      width: 100%;
+    }
+    .main_tab_content {
+      width: 100%;
+    }
+    .tabs {
+      width: 100%;
+      height: 60%;
+    }
+    .dropdown-menu {
+      width: 100%;
+    }
+      h2 {
+      font-size: 1.2rem;
+    }
+    /* iframe{
+      width: 100%;
+      height: 550px;
+    } */
+
+  }
+
+  .scrollspy-example > h4 {
+    font-size: 2rem;
+    color: hwb(0 0% 29%);
+    font-weight: 600;
+  }
+  .scrollspy-example > h5 {
+    color: hsl(201, 100%, 38%);
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .scrollspy-example > p {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+</style>
+
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary  fixed-top " >
+    <div class="container-fluid"> 
+      <a class="navbar-brand" href="main.html">KUSA</a>
+      <!-- <span class="ms-auto mx-2" id="userName"><a href="login.html" id="style_Login">Login</a></span> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="main.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">공지사항</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="./imgINT.html">사진</a>
+          </li> -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              소개
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">학교소개</a></li>
+              <li><a class="dropdown-item" href="#">학생회 소개</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">지도</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Harbin Institute of Technology</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+<div class="main">
+    <div class="main_INT"><h1>Introduction</h1></div>
+
+    <!-- <div style="padding:15px; border: 3px solid #B2B2B2; overflow: auto; height: 200px; width: 100%; color: #4C4C4C; background-color: white;">
+
+      여기에 글작성
+      
+      </div> -->
+
+    <div class="main_tab_content">
+      <div class="tabs">
+          <input id="all" type="radio" name="tab_item" checked>
+          <label class="tab_item" for="all"><h2>학생회 소개</h2></label>
+          <input id="programming" type="radio" name="tab_item">
+          <label class="tab_item" for="programming"><h2>학교 소개</h2></label>
+          <input id="design" type="radio" name="tab_item">
+          <label class="tab_item" for="design"><h2>학교 지도</h2></label>
+          <div class="tab_content" id="all_content">
+              <!-- KUSA -->
+              <nav id="navbar-example2" class="navbar bg-light px-3 mb-3">
+                <a class="navbar-brand" href="#">학생회 소개</a>
+                <ul class="nav nav-pills">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#scrollspyHeading1">First</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#scrollspyHeading2">Second</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+                      <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+
+              <div style="padding:15px; border: 3px solid #B2B2B2; overflow: auto; height: 200px; width: 100%; height: 70vh; color: #4C4C4C; background-color: white;">
+
+              <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0">
+                <h4 id="scrollspyHeading1">HIT KUSA란</h4>
+                <h5>HIT KUSA는 여러분과의 가치를 공유합니다.</h5>
+                <img src="./images/화면 캡처 2023-08-01 203416.png" alt="HIT KUSA"  style="width: 30%;">
+                <p>우리의 가치를 실현하기 위해서는 힘이 필요하고, 힘을 얻기 위해서는 조직이 필요합니다.
+                한인 유학생들에게 발생하는 모든 문제와 외국 유학생, 중국인 등과의 교류 등등
+                글로벌 교류 및 다양한 학교 생활을 위해 HIT KUSA가 존재하며,
+                KUSA는 실행 능력을 가진 조직으로 성장하여 여러분의 가치를 실현하기 위해 존재 합니다.
+                </p>
+                <h4 id="scrollspyHeading2">HIT KUSA 미래 전략</h4>
+                <h5>HIT KUSA의 비전은 다각화된 조직의 고속 성장을 추구합니다.</h5>
+                <img src="./images/화면 캡처 2023-08-01 192425.png" alt="미래 전략" style="width: 30%;">
+                <p>현재 HIT KUSA의 비전은 다각화된 조직의 고속 성장이라는 것을 강조합니다.
+                  향루 미래 전략의 핵심 주제로 1차 성장에는 총 6가지의 과제를 바탕으로 고속 성장이라는 방향성을 조직은 
+                  결정하였습니다. COVID-19로 인한 비자 발급 제한이 완화된 후 우리는 오프라인으로 진행되는 학교 생활을 함께 꾸며나아가야 합니다.
+                  따라서 HIT KUSA는 한인 유학생들을 위한 다각화된 정교한 조직으로 다시 재정비되며 따라서 존재합니다.
+                </p>
+                <h4 id="scrollspyHeading3">미래전략 I : 고속 성장</h4>
+                <h5>-학생회 조직 개편-</h5>
+                <p>중국에서의 활동 시작을 위해 조직을 새롭게 개편하였다. 기존의 모호하고 활동이 불분명했던
+                  오류를 수정하고 세분화, 다각화된 조직 개편을 통해 향후 6가지의 성장 목표 달성을 목적으로 하여,
+                  개편된 조직에는 중국에 있는 교내 학생들만 참여 가능하다.
+                </p>
+                <h5>-학생회 대외 업무-</h5>
+                <p>하얼빈 한인회 생사 참여, 영사관님과의 만남, 중국 동아리와의 협력, 해외 유학생과의 활동, 동북 3성 대학과의 교류,
+                  국제 교육원과의 협력 등 다양한 대외 업무를 확장해 나아가고 향후 하공대 주변 상권과의 협력 등 HIT KUSA의 영역을 넓혀가는 목적을 가지고 있다.
+                </p>
+                <h5>-특수 조직 신설-</h5>
+                <p>특수 조직은 HIT KUSA 회장 직속의 조직이며, 향후 HIT KUSA에서 가장 중요한 역할을 하는 조직이 될 것이다.
+                  특수 조직 신설을 통해 다양한 연구개발을 통해 학생회의 발전과 학생 발전을 도모할 것이며, 이는 가장 중요한 고속 성장의 심장부 역할을 할 예정이다.
+                </p>
+                <h5>-학생회 활동 인증-</h5>
+                <p> 모두가 봉사의 목정을 가지고 들어왔으나 활동에 대한 기록이 남지 않는다면 성취감을 느낄 수 없다.
+                  현재 모든 중국 대학의 유학생 학생회는 인정받지 못하고 있으며, 이는 명백하다.
+                  하지만 HIT KUSA는 유일하게 인증받을 수 있는 조직이 되었으며, 인증 내용에느 임명장, 활동 인증,
+                  봉사 시간, 표창장(우수 인원) 수여를 통해 모든 조직원의 활동을 인증받을 수 있게 되었다.
+                </p>
+                <h5>-미디어 홍보방식 개편-</h5>
+                <p> 기존의 이미지 제공을 넘어서 영상 제공을 목정으로 하고 있다. 고속 성장을 위해서는 다양하고
+                  정확한 정보를 보다 많이 제공하는 것이다. 따라서 미디어 홍보 방식 개편을 통해 인스타 릴스,
+                  유튜브 등 다양한 영상 정보 제공을 통해 HIT KUSA의 영향력을 확대해 나아간다.
+                </p>
+                <h5>-과잠, 명함 제작-</h5>
+                <p> 하공대 과잠 제작을 통해 대학 라이프의 삶을 충족하고 연대감을 확대해 나아간다.
+                  또한, 학교 명함 제작을 통해 향후 높으신 분들과의 만남에서 모든 인원이 명함 교환이 가능하게 만드는 것을 목표로 한다.
+                </p>
+                <h4 id="scrollspyHeading4">미래전략 I : 조직 개편</h4>
+                <img src="./images/화면 캡처 2023-08-01 195438.png" alt="조직 개편" style="width: 40%;">
+                <h5>HIT KUSA 미래전략기획부 국제교육팀</h5>
+                <p>외국 유학생들과 협력을 통한 언어 교류, 학술 자료 지원 업무, 교육 자료 제공 및 교육 등 국제 학생들 및 중국인들과의 교육 
+                  교류 및 협력, 모임 제공 등의 업무를 진행하는 팀이다.
+                </p>
+                <h5>HIT KUSA 미래전략기획부 전략마케팅팀</h5>
+                <p>기존의 이미지 제공을 넘어서 영상 제공을 목정으로 하며,
+                  학교 홍보, 학생회 홍보, 기타 기종의 정보 제공 등 모든 분야, 혹은 일부 분야에서의 영상 제공을 기획하고
+                  미래전략기획부에서의 다양한 전략적 마케팅을 하는 팀이다.
+                </p>
+                <h5>HIT KUSA 미래전략기획부 국제협력팀</h5>
+                <p>하얼빈 한인회 행사 참여, 영사관님과의 만남, 중국 동아리와의 협력, 해외 유학생과의 활동, 동북 3성 대학과의 교류,
+                  국제교육원과의 협력 등 다양한 대외 업무를 확장해 나아가고 이를 기획하는 팀이다.
+                </p>
+                <h4 id="scrollspyHeading5">미래전략 I : 특수 조직 신설</h4>
+                <img src="./images/화면 캡처 2023-08-01 203217.png" alt="특수조직 신설" style="width: 40%;">
+                <h5>HIT KUSA 연구개발부 A.I 연구개발팀</h5>
+                <p>인공지능기반의 연구개발이 이뤄지며 1차 목표는 챗봇 개발이다.
+                  1차 목표 달성 후 학생회와 본인의 발전을 위한 연구개발이 진행되며,
+                  지원자격은 인공지능과 관련된 전공지식이 기반이되어야 한다.
+                </p>
+                <h5>HIT KUSA 연구개발부 S.W 연구개발팀</h5>
+                <p>소프트웨어 관련 연구개발을 목적으로 하며, 1차 목표는 학생회 홈페이지 개설이다.
+                  1차 목표 달성 후 학생회와 본인의 발전을 위한 연구개발이 진행되며, 진원자격은 소프트웨어와 관현된 전공 지식이
+                  기반이 되어야 한다.
+                </p>
+                <h5>HIT KUSA 연구개발부</h5>
+                <p>
+                  지속적인 연구개방이 이루어져야 하며, 주기적인 보고서 제출, 논문 제출, 결과물 보고 등 학술적인 내용을 바탕으로 향후 
+                  결과물, 논문 및 보고서에 대한 발표가 이뤄진다.
+                </p>
+              </div>
+          </div>
+        </div>
+          <div class="tab_content" id="programming_content">
+              <!-- KUSA -->
+              <nav id="navbar-example2" class="navbar bg-light px-3 mb-3">
+                <a class="navbar-brand" href="#">학교 소개</a>
+                <ul class="nav nav-pills">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#scrollspyHeading1">First</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#scrollspyHeading2">Second</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#scrollspyHeading5">PDF 파일</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+              <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0">
+                <h4 id="scrollspyHeading1">First heading</h4>
+                <p>...</p>
+                <h4 id="scrollspyHeading2">Second heading</h4>
+                <p>...</p> 
+                <h4 id="scrollspyHeading3">Third heading</h4>
+                <p>...</p>
+                <h4 id="scrollspyHeading4">Fourth heading</h4>
+                <p>...</p>
+                <h4 id="scrollspyHeading5">다운로드하기</h4>
+                <p><a href="./pdf_files/2023-06-30- 전체 회의.pdf" download="./pdf_files/2023-06-30- 전체 회의.pdf">학생회 설명도 다운받기</a></p>
+              </div>
+      </div>
+      <div class="tab_content" id="design_content">
+          <div>
+              <iframe src="https://map.hit.edu.cn/" frameborder="0"
+              width="100%" 
+              style="border: 4px solid red; height: 75vh;"></iframe>
+          </div>
+      </div> 
+  </div>
+</div>
+</div>
+
+
+
+  
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+  <script >
+
+ 
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBaPocafLkaD6G-OlMHkO64YDmAbgYsW5A",
+      authDomain: "homepage-9978e.firebaseapp.com",
+      projectId: "homepage-9978e",
+      storageBucket: "homepage-9978e.appspot.com",
+      messagingSenderId: "237249758140",
+      appId: "1:237249758140:web:5edb2687779d50ffb361b9",
+      measurementId: "G-26XL67DWXG"
+    };
+
+
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  
+
+  <script>
+    const db = firebase.firestore();
+    db.collection('product').get().then((결과)=>{
+
+
+    var 뺀거 = localStorage.getItem('user');
+        if(localStorage.getItem('user') != null){
+
+        $('#userName').html(JSON.parse(뺀거).displayName);
+
+        }
+
+        firebase.auth().onAuthStateChanged((user)=>{
+            if (user) {
+              console.log(user.uid);
+              console.log(user.displayName);
+              localStorage.setItem('user', JSON.stringify(user));
+              
+            }
+          })//이름 뜨는 기능
+
+        })
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>하얼빈공업대학교 학생회</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+  <style>
+    @media (max-width : 420px) {
+      .navbar {
+        width: 100%;
+      }
+      .center {
+        width: 100%;
+        height: 100vh;
+      }
+      footer {
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero {
+      width: 100%;
+      /* height: 100%; */
+    }
+
+    .hero > p {
+      display: none;
+    }
+    
+    }
+    footer > address > a:hover {
+      color: #1885df;
+    }
+  </style>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary  fixed-top " >
+    <div class="container-fluid"> 
+      <a class="navbar-brand" href="main.html">KUSA</a>
+      <!-- <span class="ms-auto mx-2" id="userName"><a href="login.html" id="style_Login">Login</a></span> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="main.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">공지사항</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="./imgINT.html">사진</a>
+          </li> -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              소개
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="INT.html">학교소개</a></li>
+              <li><a class="dropdown-item" href="INT.html">학생회 소개</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="INT.html">지도</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Harbin Institute of Technology</a>
+          </li>
+        </ul>
+      
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+  <div class="center">
+
+    <div class="hero">
+      <h2>KUSA IS YOUR LIFE</h2>
+      <p class="typing-text">Live Well, Love Much, Laugh Often. Follow your own star.</p>
+      <button type="button" onclick="location.href='./INT.html';">more KUSA</button>
+    </div>  
+
+  </div>
+
+
+
+
+
+  <footer>
+    <!-- <p>HIT KUSA </p><br> -->
+    <br><address>사이트 : <a href="http://www.hit.edu.cn/" style=" text-decoration: none; color:#FFF;" target="_blank">Harbin Institute of Technology</a><br>
+    주소 : 哈尔滨工业大学(本部):哈尔滨市南岗区西大直街92号<br>
+    학생회장 이메일 : ,
+    개발자 이메일 :</address>
+    
+  </footer>
+
+
+
+
+
+
+
+  
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+  <script >
+
+ 
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBaPocafLkaD6G-OlMHkO64YDmAbgYsW5A",
+      authDomain: "homepage-9978e.firebaseapp.com",
+      projectId: "homepage-9978e",
+      storageBucket: "homepage-9978e.appspot.com",
+      messagingSenderId: "237249758140",
+      appId: "1:237249758140:web:5edb2687779d50ffb361b9",
+      measurementId: "G-26XL67DWXG"
+    };
+
+
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  
+
+  <script>
+    const db = firebase.firestore();
+    db.collection('product').get().then((결과)=>{
+
+
+    var 뺀거 = localStorage.getItem('user');
+        if(localStorage.getItem('user') != null){
+
+        $('#userName').html(JSON.parse(뺀거).displayName);
+
+        }
+
+        firebase.auth().onAuthStateChanged((user)=>{
+            if (user) {
+              console.log(user.uid);
+              console.log(user.displayName);
+              localStorage.setItem('user', JSON.stringify(user));
+              
+            }
+          })//이름 뜨는 기능
+
+        })
+  </script>
+
+</body>
+</html>
